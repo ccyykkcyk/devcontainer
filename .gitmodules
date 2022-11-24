@@ -1,0 +1,3 @@
+[submodule "64gram"]
+	path = 64gram
+	url = https://github.com/TDesktop-x64/tdesktop
