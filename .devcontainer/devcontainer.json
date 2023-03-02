@@ -15,7 +15,6 @@
             "version": "latest",
             "ppa": "false"
         },
-        "ghcr.io/devcontainers/features/python:1": {},
         "ghcr.io/devcontainers/features/node:1": {},
         "ghcr.io/devcontainers/features/rust:1": {},
         "ghcr.io/devcontainers/features/go:1": {}
