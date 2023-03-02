@@ -14,7 +14,11 @@
         "ghcr.io/devcontainers/features/git:1": {
             "version": "latest",
             "ppa": "false"
-        }
+        },
+        "ghcr.io/devcontainers/features/python:1": {},
+        "ghcr.io/devcontainers/features/node:1": {},
+        "ghcr.io/devcontainers/features/rust:1": {},
+        "ghcr.io/devcontainers/features/go:1": {}
     },
     "capAdd": [
         "SYS_PTRACE"
@@ -29,8 +33,7 @@
                 "ms-vscode.cmake-tools",
                 "llvm-vs-code-extensions.vscode-clangd",
                 "matepek.vscode-catch2-test-adapter",
-                "vadimcn.vscode-lldb",
-                "mutantdino.resourcemonitor"
+                "vadimcn.vscode-lldb"
             ]
         }
     },

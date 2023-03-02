@@ -3,9 +3,20 @@ FROM buildpack-deps:${VARIANT}-curl
 USER root
 
 RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
-    && apt-get -y install build-essential cmake cppcheck valgrind clang lldb llvm gdb qt6-base-dev bash-completion command-not-found gcc-arm-none-eabi binutils-arm-none-eabi gdb-arm-none-eabi libstdc++-arm-none-eabi-dev \
+    && apt-get -y install --no-install-recommends build-essential cmake cppcheck valgrind clang lldb llvm gdb bash-completion command-not-found \
     && apt-get autoremove -y && apt-get clean -y && rm -rf /var/lib/apt/lists/*
+
+# Setup ENV vars for vcpkg
+ENV VCPKG_ROOT=/usr/local/vcpkg \
+    VCPKG_DOWNLOADS=/usr/local/vcpkg-downloads
+ENV PATH="${PATH}:${VCPKG_ROOT}"
 
 RUN echo 'root:ccyykk' | chpasswd
 
 ARG USERNAME=vscode
+
+# Install vcpkg itself: https://github.com/microsoft/vcpkg/blob/master/README.md#quick-start-unix
+COPY base-scripts/install-vcpkg.sh /tmp/
+RUN chmod +x /tmp/install-vcpkg.sh \
+    && ./tmp/install-vcpkg.sh ${USERNAME} \
+    && rm -f /tmp/install-vcpkg.sh
