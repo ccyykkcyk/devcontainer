@@ -1,0 +1,3 @@
+[submodule "mylist"]
+	path = mylist
+	url = https://github.com/ccyykkcyk/mylist.git
