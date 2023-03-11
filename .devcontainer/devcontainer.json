@@ -5,7 +5,8 @@
     },
     "features": {
         "ghcr.io/devcontainers/features/common-utils:2": {
-            "username": "vscode"
+            "username": "vscode",
+            "configureZshAsDefaultShell": true
         },
         "ghcr.io/devcontainers/features/node:1": {
             "nodeGypDependencies": false
