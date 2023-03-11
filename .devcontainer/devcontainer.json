@@ -5,17 +5,11 @@
     },
     "features": {
         "ghcr.io/devcontainers/features/common-utils:2": {
-            "installZsh": "true",
-            "username": "vscode",
-            "uid": "1000",
-            "gid": "1000",
-            "upgradePackages": "true"
+            "username": "vscode"
         },
-        "ghcr.io/devcontainers/features/git:1": {
-            "version": "latest",
-            "ppa": "false"
+        "ghcr.io/devcontainers/features/node:1": {
+            "nodeGypDependencies": false
         },
-        "ghcr.io/devcontainers/features/node:1": {},
         "ghcr.io/devcontainers/features/rust:1": {},
         "ghcr.io/devcontainers/features/go:1": {}
     },
