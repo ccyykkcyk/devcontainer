@@ -20,6 +20,19 @@
         "seccomp=unconfined"
     ],
     "customizations": {
+        "codespaces": {
+            "repositories": {
+                "ccyykkcyk/mylist": {
+                    "permissions": "write-all"
+                },
+                "ccyykkcyk/leetcode": {
+                    "permissions": "write-all"
+                },
+                "ccyykkcyk/blog": {
+                    "permissions": "write-all"
+                }
+            }
+        },
         "vscode": {
             "settings": {
                 "terminal.integrated.defaultProfile.linux": "zsh"
