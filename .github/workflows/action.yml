@@ -20,7 +20,6 @@ jobs:
       - name: Build and run Dev Container task
         uses: devcontainers/ci@v0.3
         with:
-          subFolder: .devcontainer/cyk
           imageName: ghcr.io/ccyykkcyk/Debian-testing
           push: always
           skipContainerUserIdUpdate: true
