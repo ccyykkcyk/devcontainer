@@ -20,7 +20,7 @@ jobs:
       - name: Build and run Dev Container task
         uses: devcontainers/ci@v0.3
         with:
-          imageName: ghcr.io/ccyykkcyk/Debian-testing
+          imageName: ghcr.io/ccyykkcyk/debian-testing
           push: always
           skipContainerUserIdUpdate: true
           noCache: true
