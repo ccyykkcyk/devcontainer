@@ -5,13 +5,10 @@
     },
     "features": {
         "ghcr.io/devcontainers/features/common-utils:2": {
+            "installZsh": false,
+            "installOhMyZsh": false,
             "username": "vscode"
-        },
-        "ghcr.io/devcontainers/features/node:1": {
-            "nodeGypDependencies": false
-        },
-        "ghcr.io/devcontainers/features/rust:1": {},
-        "ghcr.io/devcontainers/features/go:1": {}
+        }
     },
     "capAdd": [
         "SYS_PTRACE"
@@ -20,25 +17,22 @@
         "seccomp=unconfined"
     ],
     "customizations": {
-        "codespaces": {
-            "repositories": {
-                "ccyykkcyk/mylist": {
-                    "permissions": "write-all"
-                },
-                "ccyykkcyk/leetcode": {
-                    "permissions": "write-all"
-                },
-                "ccyykkcyk/blog": {
-                    "permissions": "write-all"
-                }
-            }
-        },
         "vscode": {
             "settings": {
-                "terminal.integrated.defaultProfile.linux": "zsh"
+                "clangd.path": "clangd-15",
+                "clangd.arguments": [
+                    "--enable-config",
+                    "--background-index",
+                    "--clang-tidy",
+                    "--all-scopes-completion",
+                    "--completion-style=detailed",
+                    "--header-insertion=iwyu",
+                    "--function-arg-placeholders",
+                    "--log=verbose",
+                    "--pretty"
+                ]
             },
             "extensions": [
-                "ms-vscode.cpptools",
                 "ms-vscode.cmake-tools",
                 "llvm-vs-code-extensions.vscode-clangd",
                 "matepek.vscode-catch2-test-adapter",
